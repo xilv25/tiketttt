@@ -155,7 +155,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
           ].join("\n")
         )
         .setFooter({
-          text: "made by @unstoppable_neid • LimeHub Ticket System",
+          text: "created by @unstoppable_neid • LimeHub Ticket System",
         })
         .setTimestamp();
 
@@ -452,7 +452,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
           ].join("\n")
         )
         .setFooter({
-          text: "Only you can see this • LimeHub Ticket System",
+          text: "Created by @unstoppable_neid • LimeHub Ticket System",
         })
         .setTimestamp();
 
@@ -512,16 +512,16 @@ client.on(Events.InteractionCreate, async (interaction) => {
       }
 
       const title =
-        isSupport ? "🛠️ Support Ticket Processing" : "🛠️ Ticket Processing";
+        isSupport ? "✅ Pertanyaan telah diselesaikan" : "🛠️ Ticket Processing";
 
       const processingEmbed = new EmbedBuilder()
         .setColor(THEME_COLOR)
         .setTitle(title)
         .setDescription(
           [
-            `Tiket ini sedang diproses oleh ${interaction.member}.`,
+            `Tiket ini telah diselesaikan oleh ${interaction.member}.`,
             "",
-            `Halo ${ticketUserMention}, mohon tunggu ya!`,
+            `Halo ${ticketUserMention}, pertanyaan kamu sudah terjawab semua, mohon kerjasamanya untuk review LimeHub sesuai dengan pengalaman kamu!`,
           ].join("\n")
         )
         .setTimestamp();
@@ -552,9 +552,9 @@ client.on(Events.InteractionCreate, async (interaction) => {
                 "",
                 `Silakan lanjut ke channel ${premiumMention}.`,
                 "",
-                "Ketik `!command` untuk lihat semua info yang kamu cari!",
+                "Klik **Get Script** untuk mengambil script kamu!",
                 "",
-                `_Ticket akan otomatis ditutup dalam ${formatTime(seconds)}._`,
+                `Ticket akan otomatis ditutup dalam **${formatTime(seconds)}**.`,
               ].join("\n")
             )
             .setTimestamp();
@@ -743,11 +743,11 @@ client.on(Events.InteractionCreate, async (interaction) => {
           .setTitle("💡 FAQ Answer")
           .setDescription(
             [
-              `**Q:** ${question}`,
+              `**Q: ${question}**`,
               "",
-              `**A:** ${answer}`,
+              `**A: ${answer}**`,
               "",
-              `_Session FAQ ini akan berakhir dalam ${formatTime(seconds)}._`,
+              `Session FAQ ini akan berakhir dalam **${formatTime(seconds)}**.`,
             ].join("\n")
           )
           .setTimestamp();
