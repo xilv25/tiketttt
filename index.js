@@ -526,6 +526,23 @@ client.on(Events.InteractionCreate, async (interaction) => {
         )
         .setTimestamp();
 
+      let remaining = 300; // detik
+
+        const msg = await channel
+          .send({ embeds: [makeDoneEmbed(remaining)] })
+          .catch(() => null);
+        if (!msg) return;
+
+        const interval = setInterval(async () => {
+          remaining--;
+
+          if (remaining >= 0) {
+            msg.edit({ embeds: [makeDoneEmbed(remaining)] }).catch(() => {});
+          }
+
+          if (remaining === 0) {
+            clearInterval(interval);
+
       await channel.send({ embeds: [processingEmbed] });
 
       await interaction.reply({
