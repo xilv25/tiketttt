@@ -374,7 +374,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
             ].join("\n")
           )
           .setFooter({
-            text: `LimeHub Ticket • ID: ${channel.id}`,
+            text: `created by @unstoppable_neid • LimeHub Purchase`,
             iconURL: interaction.client.user.displayAvatarURL(),
           })
           .setTimestamp();
@@ -397,7 +397,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
             ].join("\n")
           )
           .setFooter({
-            text: `LimeHub Support • ID: ${channel.id}`,
+            text: `created by @unstoppable_neid • LimeHub Support`,
             iconURL: interaction.client.user.displayAvatarURL(),
           })
           .setTimestamp();
@@ -452,7 +452,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
           ].join("\n")
         )
         .setFooter({
-          text: "Created by @unstoppable_neid • LimeHub Ticket System",
+          text: "created by @unstoppable_neid • LimeHub Ticket System",
         })
         .setTimestamp();
 
